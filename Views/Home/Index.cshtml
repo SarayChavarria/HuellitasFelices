@@ -1,8 +1,110 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿
+@{
+    ViewData["Title"] = "Inicio";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<header id="inicio" class="portada text-center text-white py-5">
+    <div class="container py-5">
+
+        <p class="etiqueta-portada">
+            TODO PARA QUIENES MÁS QUIERES
+        </p>
+
+        <h1 class="display-4 fw-bold">
+            Huellitas Felices
+        </h1>
+
+        <p class="lead mx-auto texto-portada">
+            Alimento, accesorios y servicios para cuidar
+            a tus compañeros de cuatro patas.
+        </p>
+
+        <a asp-controller="Citas"
+           asp-action="Registrar"
+           class="btn btn-claro btn-lg mt-3">
+            Solicitar una cita
+        </a>
+
+    </div>
+</header>
+
+<div class="container py-5">
+
+    <section class="text-center mb-5" id="productos">
+
+        <p class="texto-superior mb-1">
+            BIENVENIDOS
+        </p>
+
+        <h2 class="titulo-seccion mb-3">
+            Todo para tus mascotas
+        </h2>
+
+        <p class="text-secondary">
+            En Huellitas Felices nos preocupamos por el bienestar
+            de tus mejores amigos. Encuentra servicios y atención
+            pensados especialmente para ellos.
+        </p>
+
+        <a asp-controller="Citas"
+           asp-action="Registrar"
+           class="btn btn-principal mt-3">
+            Conoce nuestros servicios
+        </a>
+
+    </section>
+
+    <section id="horarios" class="mb-4">
+
+        <p class="texto-superior mb-1">
+            ESTAMOS PARA AYUDARTE
+        </p>
+
+        <h2 class="titulo-seccion mb-4">
+            Horarios de atención
+        </h2>
+
+        <div class="table-responsive">
+
+            <table class="table table-striped table-hover tabla-horarios">
+
+                <thead class="table-dark">
+                    <tr>
+                        <th>Días</th>
+                        <th>Horario</th>
+                        <th>Servicio destacado</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Lunes a miércoles</td>
+                        <td>8:00 a. m. - 6:00 p. m.</td>
+                        <td>Baño, peluquería y alimentos</td>
+                    </tr>
+
+                    <tr>
+                        <td>Jueves a viernes</td>
+                        <td>9:00 a. m. - 7:00 p. m.</td>
+                        <td>Consulta veterinaria</td>
+                    </tr>
+
+                    <tr>
+                        <td>Sábado</td>
+                        <td>9:00 a. m. - 5:00 p. m.</td>
+                        <td>Accesorios y alimentos</td>
+                    </tr>
+
+                    <tr>
+                        <td>Domingo</td>
+                        <td colspan="2">Cerrado por descanso del equipo</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
