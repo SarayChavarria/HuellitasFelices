@@ -1,0 +1,54 @@
+
+@model IEnumerable<HuellitasFelices.Models.Cita>
+
+@{
+    ViewData["Title"] = "Citas registradas";
+}
+
+<div class="container py-5">
+
+    <h1 class="fw-bold mb-4">Citas de nuestras mascotas 🐾</h1>
+
+    <a asp-action="Registrar"
+       class="btn btn-success mb-4">
+        + Registrar nueva cita
+    </a>
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info">
+            Todavía no hay citas registradas.
+        </div>
+    }
+    else
+    {
+        <div class="table-responsive">
+            <table class="table table-striped table-hover">
+                <thead class="table-success">
+                    <tr>
+                        <th>Propietario</th>
+                        <th>Mascota</th>
+                        <th>Especie</th>
+                        <th>Servicio</th>
+                        <th>Teléfono</th>
+                        <th>Fecha</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var cita in Model)
+                    {
+                        <tr>
+                            <td>@cita.NombrePropietario</td>
+                            <td>@cita.NombreMascota</td>
+                            <td>@cita.Especie</td>
+                            <td>@cita.Servicio</td>
+                            <td>@cita.Telefono</td>
+                            <td>@cita.Fecha.ToString("dd/MM/yyyy")</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</div>

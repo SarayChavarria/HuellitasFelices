@@ -1,0 +1,39 @@
+
+@model HuellitasFelices.Models.Cita
+
+@{
+    ViewData["Title"] = "Cita registrada";
+}
+
+<div class="container py-5">
+    <div class="card shadow-sm mx-auto text-center"
+         style="max-width: 600px;">
+
+        <div class="card-body p-5">
+
+            <h1 class="text-success">¡Cita registrada!</h1>
+
+            <p class="text-muted">
+                Gracias por confiar en Huellitas Felices.
+            </p>
+
+            <hr />
+
+            <h4>Detalles de la cita</h4>
+
+            <p><strong>Propietario:</strong> @Model.NombrePropietario</p>
+            <p><strong>Mascota:</strong> @Model.NombreMascota</p>
+            <p><strong>Especie:</strong> @Model.Especie</p>
+            <p><strong>Servicio:</strong> @Model.Servicio</p>
+            <p><strong>Teléfono:</strong> @Model.Telefono</p>
+            <p><strong>Fecha:</strong> @Model.Fecha.ToString("dd/MM/yyyy")</p>
+
+            <a asp-controller="Home"
+               asp-action="Index"
+               class="btn btn-success mt-3">
+                Volver al inicio
+            </a>
+
+        </div>
+    </div>
+</div>
