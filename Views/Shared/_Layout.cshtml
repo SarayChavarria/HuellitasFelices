@@ -44,6 +44,13 @@
                     </a>
 
                     <a class="nav-link"
+                       asp-controller="Home"
+                       asp-action="Index"
+                       asp-fragment="horarios">
+                        Horarios
+                    </a>
+
+                    <a class="nav-link"
                        asp-controller="Citas"
                        asp-action="Registrar">
                         Solicitar cita
@@ -56,16 +63,16 @@
                     </a>
 
                     <a class="nav-link"
-                       asp-controller="Home"
-                       asp-action="Index"
-                       asp-fragment="horarios">
-                        Horarios
-                    </a>
-                    
-                    <a class="nav-link"
                     asp-controller="Productos"
                     asp-action="Index">
                         Productos
+                    </a>
+
+                    
+                    <a class="nav-link"
+                    asp-controller="Carrito"
+                    asp-action="Index">
+                        🛒 Mi carrito
                     </a>
 
                 </div>

@@ -91,6 +91,15 @@
                         <p class="text-muted small">
                             Unidades disponibles: @producto.Stock
                         </p>
+                        
+                        <button type="button"
+                                class="btn btn-principal w-100 mt-auto btn-agregar-carrito"
+                                data-id="@producto.Id"
+                                data-nombre="@producto.Nombre"
+                                data-precio="@producto.Precio"
+                                data-stock="@producto.Stock">
+                            🛒 Añadir al carrito
+                        </button>
 
                     </div>
 
@@ -109,3 +118,8 @@
     }
 
 </div>
+
+
+@section Scripts {
+    <script src="~/js/carrito.js" asp-append-version="true"></script>
+}
